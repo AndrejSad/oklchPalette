@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self'; base-uri 'self';"
+    />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="clipboard-read=(self), clipboard-write=(self)"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="Generate beautiful OKLCH color palettes instantly."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.oklchpalette.com/" />
+    <meta property="og:title" content="OKLCH Palette Generator" />
+    <meta
+      property="og:description"
+      content="Generate beautiful, perceptually uniform color palettes for your next web project."
+    />
+
+    <meta property="twitter:card" content="summary" />
+
+    <meta property="twitter:title" content="OKLCH Palette Generator" />
+    <meta
+      property="twitter:description"
+      content="Generate beautiful, perceptually uniform color palettes for your next web project."
+    />
+
+    <title>OKLCH Color Palette Generator | Create Accessible CSS Colors</title>
+    <link rel="canonical" href="http://www.oklchpalette.com/" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 class="visually-hidden">OKLCH Color Palette Generator</h1>
+    <nav class="up-bar">
+      <div class="controls">
+        <div class="control-item">
+          <input type="checkbox" id="check-l" aria-label="Allow L" />
+          <label for="range-l">L: <span id="val-l">0.60</span></label>
+          <input
+            type="range"
+            id="range-l"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.6"
+            disabled
+          />
+        </div>
+        <div class="control-item">
+          <input type="checkbox" id="check-c" aria-label="Allow C" />
+          <label for="range-c">C: <span id="val-c">0.15</span></label>
+          <input
+            type="range"
+            id="range-c"
+            min="0"
+            max="0.37"
+            step="0.01"
+            value="0.15"
+            disabled
+          />
+        </div>
+        <div class="control-item">
+          <input type="checkbox" id="check-h" aria-label="Allow H" />
+          <label for="range-h">H: <span id="val-h">180</span></label>
+          <input
+            type="range"
+            id="range-h"
+            min="0"
+            max="360"
+            step="1"
+            value="180"
+            disabled
+          />
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="color-panel">
+        <span class="color-code">waiting...</span>
+        <button type="button" class="lock-btn">
+          <span class="material-symbols-outlined">lock_open</span>
+        </button>
+      </div>
+      <div class="color-panel">
+        <span class="color-code">waiting...</span>
+        <button type="button" class="lock-btn">
+          <span class="material-symbols-outlined">lock_open</span>
+        </button>
+      </div>
+      <div class="color-panel">
+        <span class="color-code">waiting...</span>
+        <button type="button" class="lock-btn">
+          <span class="material-symbols-outlined">lock_open</span>
+        </button>
+      </div>
+      <div class="color-panel">
+        <span class="color-code">waiting...</span>
+        <button type="button" class="lock-btn">
+          <span class="material-symbols-outlined">lock_open</span>
+        </button>
+      </div>
+      <div class="color-panel">
+        <span class="color-code">waiting...</span>
+        <button type="button" class="lock-btn">
+          <span class="material-symbols-outlined">lock_open</span>
+        </button>
+      </div>
+    </main>
+    <footer>
+      <a href="info.html" id="home-page-btn" class="button-style">
+        <span class="material-symbols-outlined"> help </span>
+      </a>
+      <button type="button" id="generate-btn">Generate</button>
+    </footer>
+
+    <div id="copy-toast">Copied!</div>
+    <script src="script.js"></script>
+  </body>
+</html>
